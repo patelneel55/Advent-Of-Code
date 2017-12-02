@@ -41,5 +41,28 @@ public class checkSum
         }
         
         System.out.println("Part 1: " + sum);
+	
+		sum = 9;
+		for(int i = 0;i < check.length;i++)
+        {
+            for(int j = 0;j < check[i].length - 1;j++)
+            {
+                div = 0;
+                for(int m = 1;m < check[i].length - j;m++)
+                {
+                    if(check[i][j] % check[i][j+m] == 0 || check[i][j+m] % check[i][j] == 0)
+                    {
+                        if(check[i][j] > check[i][j+m])
+                        div = check[i][j] / check[i][j+m];
+                    else
+                        div = check[i][j+m] / check[i][j];
+                    }  
+                }
+                sum += div;
+            }
+        }
+
+		System.out.println("Part 2: " + div);
+		
     }
 }
