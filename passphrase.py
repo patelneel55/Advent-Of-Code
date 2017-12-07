@@ -3,7 +3,7 @@ def main():
 	print "Part 2: ", part2()
 
 def part1():
-	file = open("pass.txt", "r")
+	file = open("day4.txt", "r")
 	list = []
 	num = 0
 	flag = True
@@ -22,7 +22,7 @@ def part1():
 	return num
 	
 def part2():
-	file = open("pass.txt", "r")
+	file = open("day4.txt", "r")
 	list = []
 	num = 0
 	flag = True

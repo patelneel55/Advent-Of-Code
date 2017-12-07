@@ -3,7 +3,7 @@ def main():
 	print "Part 2: ", part2()
 
 def part1():
-	file = open("mem.txt", "r")
+	file = open("day6.txt", "r")
 	list = file.read()
 	list = map(int, list.split())
 	its = 0
@@ -46,7 +46,7 @@ def part1():
 	return its
 
 def part2():
-	file = open("mem.txt", "r")
+	file = open("day6.txt", "r")
 	list = file.read()
 	list = map(int, list.split())
 	its = 0

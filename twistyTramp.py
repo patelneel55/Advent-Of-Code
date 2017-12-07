@@ -3,7 +3,7 @@ def main():
 	print "Part 2: ", part2()
 	
 def part1():
-	file = open("twisty.txt", "r")
+	file = open("day5.txt", "r")
 	list = file.readlines()
 	
 	steps = 0
@@ -19,7 +19,7 @@ def part1():
 	return steps
 	
 def part2():
-	file = open("twisty.txt", "r")
+	file = open("day5.txt", "r")
 	list = file.readlines()
 	
 	steps = 0
