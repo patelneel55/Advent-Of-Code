@@ -33,10 +33,6 @@ def part1():
 			note = True
 			continue
 		note = False
-	print braces
-	print "Open: ", o
-	print "Close: ", c
-	print gsum
 
 	return gsum
 
