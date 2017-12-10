@@ -1,5 +1,5 @@
 def main():
-	part1()
+	print "Part 1: ", part1()
 
 def part1():
 	f = open("day9.txt", "r")
@@ -7,33 +7,38 @@ def part1():
 	para = []
 	code = code[0]
 
-	for char in code:
-		if char == '}' or char == '{' or char == '!' or char == '<' or char == '>':
-			para.append(char)
-	print code
-	print para
-
 	count = 0
 	gsum = 0
 	flag = True
 	note = False
 
-	for text in para:
+	braces = []
+	o = 0
+	c = 0
+	for text in code:
 		if text == '<' and not note:
 			flag = False
 		if text == '>' and not note:
 			flag = True
 		if text == '{' and flag:
 			count += 1
+			braces.append('{')
 			gsum += count
-		if text == '}' and flag:
+			o += 1
+		if text == '}' and count > 0 and flag:
 			count -= 1
+			braces.append('}')
+			c += 1
 		if text == '!' and not note:
 			note = True
 			continue
-		if note:
-			note = False
+		note = False
+	print braces
+	print "Open: ", o
+	print "Close: ", c
 	print gsum
+
+	return gsum
 
 if __name__ == "__main__":
 	main()
