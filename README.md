@@ -23,3 +23,15 @@ Day 9: [process.py](https://github.com/patelneel55/AdventOfCode2017/blob/master/
 Day 10: [knot.py](https://github.com/patelneel55/AdventOfCode2017/blob/master/knot.py)
 
 Day 11: [hex.py](https://github.com/patelneel55/AdventOfCode2017/blob/master/hex.py)
+
+### Executing
+
+To run the program, download the program and the input file (or you can create your own input)
+
+Run the following command
+
+```
+python fileName.py < input.txt
+```
+
+
