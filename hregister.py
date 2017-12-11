@@ -1,15 +1,21 @@
 mx = 0
 def main():
-	print "Part 1: ", part1()
+	buffer = []
+	while 1:
+		try:
+			line = raw_input()
+			buffer.append(line)
+		except EOFError:
+			break
+	print "Part 1: ", part1(buffer)
 	print "Part 2: ", mx
 
-def part1():
+def part1(p):
 	global mx
-	f = open("day8.txt", "r")
 	
 	varDict = {}
 	
-	for line in f:
+	for line in p:
 		comp = line.strip().split()
 
 		if not comp[4] in varDict:

@@ -1,27 +1,32 @@
 def main():
-	print "Part 1: ", part1()
-	print "Part 2: ", part2()
+	buffer = []
+	while 1:
+		try:
+			line = raw_input()
+			buffer.append(line)
+		except EOFError:
+			break
+	print "Part 1: ", part1(buffer)
+	print "Part 2: ", part2(buffer)
 	
-def part1():
-	file = open("day5.txt", "r")
-	list = file.readlines()
-	
+def part1(f):
+
 	steps = 0
 	i = 0
 	while 1:
-		if(i < 0 or i >= len(list)):
+		if(i < 0 or i >= len(f)):
 			break
 		prev = i
-		i += int(list[i])
-		list[prev] = int(list[prev]) + 1
+		i += int(f[i])
+		f[prev] = int(f[prev]) + 1
 		steps += 1
 		
 	return steps
 	
-def part2():
+def part2(f):
 	file = open("day5.txt", "r")
 	list = file.readlines()
-	
+
 	steps = 0
 	i = 0
 	while 1:

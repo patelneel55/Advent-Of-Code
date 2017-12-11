@@ -1,12 +1,9 @@
 def main():
-	print "Part 1: ", part1()
-	print "Part 2: ", part2()
+	line = raw_input()	
+	print "Part 1: ", part1(line)
+	print "Part 2: ", part2(line)
 
-def part1():
-	f = open("day9.txt", "r")
-	code = f.readlines()
-	para = []
-	code = code[0]
+def part1(p):
 
 	count = 0
 	gsum = 0
@@ -16,7 +13,7 @@ def part1():
 	braces = []
 	o = 0
 	c = 0
-	for text in code:
+	for text in p:
 		if text == '<' and not note:
 			flag = False
 		if text == '>' and not note:
@@ -38,16 +35,12 @@ def part1():
 	return gsum
 
 
-def part2():
-	f = open("day9.txt", "r")
-	code = f.readlines()
-	code = code[0]
-
+def part2(p):
 	charCount = 0
 	garbo = False
 	note = False
 
-	for text in code:
+	for text in p:
 		if text == '<' and not note and not garbo:
 			garbo = True
 			continue

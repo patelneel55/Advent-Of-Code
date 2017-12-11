@@ -4,9 +4,8 @@ def main():
 	part1()
 
 def part1():
-	f = open("day11.txt", "r")
-	line = f.readlines()
-	line = line[0].strip().split(",")
+	line = raw_input()
+	line = line.strip().split(",")
 
 	highest = 0
 	x = 0

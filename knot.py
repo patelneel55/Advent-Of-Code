@@ -1,10 +1,9 @@
 def main():
-	print "Part 1: ", part1()
+	line = raw_input()
+	print "Part 1: ", part1(line)
 
-def part1():
-	f = open("day10.txt", "r")
-	line = f.read()
-	line = line.strip().split(",")
+def part1(p):
+	line = p.strip().split(",")
 	
 	aryList = []
 	count = 0

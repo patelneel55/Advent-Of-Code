@@ -3,10 +3,15 @@ import collections
 
 graph = nx.DiGraph()
 
-f = open("day7.txt", "r")
-lines = f.readlines()
+buffer = []
+while 1:
+	try:
+		lin = raw_input()
+		buffer.append(lin)
+	except EOFError:
+		break
 # Build the graph of programs
-for line in lines:
+for line in buffer:
     name = line.split()[0]
 
     graph.add_node(name, weight=int(line.split()[1].strip('()')))

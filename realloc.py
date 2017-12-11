@@ -1,11 +1,10 @@
 def main():
-	print "Part 1: ", part1()
-	print "Part 2: ", part2()
+	list = raw_input()
+	print "Part 1: ", part1(list)
+	print "Part 2: ", part2(list)
 
-def part1():
-	file = open("day6.txt", "r")
-	list = file.read()
-	list = map(int, list.split())
+def part1(p):
+	list = map(int, p.split())
 	its = 0
 	length = len(list)
 	mx = list[0]
@@ -45,10 +44,8 @@ def part1():
 	
 	return its
 
-def part2():
-	file = open("day6.txt", "r")
-	list = file.read()
-	list = map(int, list.split())
+def part2(p):
+	list = map(int, p.split())
 	its = 0
 	length = len(list)
 	mx = list[0]

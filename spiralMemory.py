@@ -2,7 +2,7 @@ from itertools import count
 
 import math
 def main():
-	num = input("Enter a number: ")
+	num = input()
 	print "Part 1: ", part1(num)
 	print "Part 2: ", part2(num)
 

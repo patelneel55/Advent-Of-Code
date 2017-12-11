@@ -1,5 +1,5 @@
 def main():
-	num = raw_input("Enter the number:")
+	num = raw_input()
 	print "Part 1: ", part1(num)
 	print "Part 2: ", part2(num)
 

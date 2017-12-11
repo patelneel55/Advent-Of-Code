@@ -1,13 +1,19 @@
 def main():
-	print "Part 1: ", part1()
-	print "Part 2: ", part2()
+	buffer = []
+	while 1:
+		try:
+			line = raw_input()
+			buffer.append(line)
+		except EOFError:
+			break
+	print "Part 1: ", part1(buffer)
+	print "Part 2: ", part2(buffer)
 
-def part1():
-	file = open("day4.txt", "r")
+def part1(f):
 	list = []
 	num = 0
 	flag = True
-	for line in file:
+	for line in f:
 		flag = True
 		list = []
 		words = line.split()
@@ -18,15 +24,13 @@ def part1():
 				flag = False
 		if flag == True:
 			num += 1
-	file.close()
 	return num
 	
-def part2():
-	file = open("day4.txt", "r")
+def part2(f):
 	list = []
 	num = 0
 	flag = True
-	for line in file:
+	for line in f:
 		flag = True
 		list = []
 		words = line.split()
@@ -40,7 +44,6 @@ def part2():
 				flag = False
 		if flag:
 			num += 1
-	file.close()
 	return num
 	
 if __name__ == "__main__":
