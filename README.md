@@ -28,7 +28,7 @@ Day 11: [hex.py](https://github.com/patelneel55/AdventOfCode2017/blob/master/hex
 
 To run the program, download the program and the input file (or you can create your own input)
 
-Run the following command
+Run the following command:
 
 ```
 python fileName.py < input.txt
