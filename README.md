@@ -24,6 +24,8 @@ Day 10: [knot.py](https://github.com/patelneel55/AdventOfCode2017/blob/master/kn
 
 Day 11: [hex.py](https://github.com/patelneel55/AdventOfCode2017/blob/master/hex.py)
 
+Day 12: [plumber.py](https://github.com/patelneel55/AdventOfCode2017/blob/master/plumber.py)
+
 ### Executing
 
 To run the program, download the program and the input file (or you can create your own input)
